@@ -4,6 +4,8 @@ require 'dm-core'
 require 'dm-validations'
 require File.expand_path(File.join(File.dirname(__FILE__), '/models/newsletter.rb'))
 
+set :root, File.dirname(__FILE__)
+
 configure :production do
   DataMapper.setup(:default, ENV['DATABASE_URL'])
   
